@@ -9,20 +9,20 @@ var pipeBottom = new Image();
 
 var level = prompt('lvl? (1/2)', '');
 if(level == '1') {
-	bird.src = "img/gorin.player.jpg";
-	bg.src = "img/bg.png";
-	pipeUp.src = "img/vilka.topenemy.jpg";
-	pipeBottom.src = "img/taburetka.bottomenemy.jpg";
+	bird.src = "textures/img/gorin.player.jpg";
+	bg.src = "textures/img/bg.png";
+	pipeUp.src = "textures/img/vilka.topenemy.jpg";
+	pipeBottom.src = "textures/img/taburetka.bottomenemy.jpg";
 } else if(level == '2') {
-	bird.src = "img2/gorin.player.jpg";
-	bg.src = "img2/bg.jpg";
-	pipeUp.src = "img2/lopata.topenemy.png";
-	pipeBottom.src = "img2/dver.bottomenemy.png";
+	bird.src = "textures/img2/gorin.player.jpg";
+	bg.src = "/textures/img2/bg.jpg";
+	pipeUp.src = "textures/img2/lopata.topenemy.png";
+	pipeBottom.src = "textures/img2/dver.bottomenemy.png";
 } else if(level == '666') {
-	bird.src = "sl/poroshenko.player.png";
-	bg.src = "sl/bg.png";
-	pipeUp.src = "sl/putin.topenemy.jpg";
-	pipeBottom.src = "sl/zel.bottomenemy.jpg";
+	bird.src = "textures/sl/poroshenko.player.png";
+	bg.src = "textures/sl/bg.png";
+	pipeUp.src = "textures/sl/putin.topenemy.jpg";
+	pipeBottom.src = "textures/sl/zel.bottomenemy.jpg";
 } else if(level === null || level === undefined || level === NaN){
 	alert('што');
 } else if(level === ''){
@@ -68,10 +68,6 @@ function draw() {
  x : cvs.width,
  y : Math.floor(Math.random() * pipeUp.height) - pipeUp.height
  });
- }
-
- if(pipe[i].x == 5) {
- score++;
  }
 
  // Отслеживание прикосновений
