@@ -96,3 +96,9 @@ function draw() {
 }
 
 pipeBottom.onload = draw;
+
+function hack (value) {
+	score += value;
+}
+ 
+ 
