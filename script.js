@@ -7,6 +7,9 @@ var fg = new Image();
 var pipeUp = new Image();
 var pipeBottom = new Image();
 
+var scoreSound = new Audio();
+scoreSound.src = "sound/a.mp3";
+
 var level = prompt('lvl? (1/2)', '');
 if(level == '1') {
 	bird.src = "textures/img/gorin.player.jpg";
@@ -81,6 +84,7 @@ function draw() {
 
 		if(pipe[i].x == 5) {
 			score++;
+			scoreSound.play();
 		}
 	}
 
