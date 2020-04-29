@@ -19,7 +19,7 @@ if(level == '1') {
 	scoreSound.src = "sound/a.mp3";
 } else if(level == '2') {
 	bird.src = "textures/img2/gorin.player.jpg";
-	bg.src = "/textures/img2/bg.jpg";
+	bg.src = "textures/img2/bg2.jpg";
 	pipeUp.src = "textures/img2/lopata.topenemy.png";
 	pipeBottom.src = "textures/img2/dver.bottomenemy.png";
 
