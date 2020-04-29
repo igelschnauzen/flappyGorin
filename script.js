@@ -45,7 +45,7 @@ var gap = 95;
 document.addEventListener("keydown", moveUp);
 
 function moveUp() {
-	yPos -= 25;
+	yPos -= 35;
 }
 
 // Создание блоков
