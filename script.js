@@ -8,7 +8,6 @@ var pipeUp = new Image();
 var pipeBottom = new Image();
 
 var scoreSound = new Audio();
-scoreSound.src = "sound/a.mp3";
 
 var level = prompt('lvl? (1/2)', '');
 if(level == '1') {
@@ -16,16 +15,22 @@ if(level == '1') {
 	bg.src = "textures/img/bg.png";
 	pipeUp.src = "textures/img/vilka.topenemy.jpg";
 	pipeBottom.src = "textures/img/taburetka.bottomenemy.jpg";
+
+	scoreSound.src = "sound/a.mp3";
 } else if(level == '2') {
 	bird.src = "textures/img2/gorin.player.jpg";
 	bg.src = "/textures/img2/bg.jpg";
 	pipeUp.src = "textures/img2/lopata.topenemy.png";
 	pipeBottom.src = "textures/img2/dver.bottomenemy.png";
+
+	scoreSound.src = "sound/a.mp3";
 } else if(level == '666') {
 	bird.src = "textures/sl/poroshenko.player.png";
 	bg.src = "textures/sl/bg.png";
 	pipeUp.src = "textures/sl/putin.topenemy.jpg";
 	pipeBottom.src = "textures/sl/zel.bottomenemy.jpg";
+
+	scoreSound.src = "sound/b.mp3";
 } else if(level === null || level === undefined || level === NaN){
 	alert('што');
 } else if(level === ''){
