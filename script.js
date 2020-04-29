@@ -8,17 +8,20 @@ var pipeUp = new Image();
 var pipeBottom = new Image();
 
 var scoreSound = new Audio();
+var deathSound = new Audio();
+
+deathSound.src = "sound/death.ogg";
 
 var level = prompt('lvl? (1/2)', '');
 if(level == '1') {
-	bird.src = "textures/img/gorin.player.jpg";
+	bird.src = "textures/img/gorin.player.png";
 	bg.src = "textures/img/bg.png";
 	pipeUp.src = "textures/img/vilka.topenemy.jpg";
 	pipeBottom.src = "textures/img/taburetka.bottomenemy.jpg";
 
 	scoreSound.src = "sound/a.mp3";
 } else if(level == '2') {
-	bird.src = "textures/img2/gorin.player.jpg";
+	bird.src = "textures/img2/gorin.player.png";
 	bg.src = "textures/img2/bg2.jpg";
 	pipeUp.src = "textures/img2/lopata.topenemy.png";
 	pipeBottom.src = "textures/img2/dver.bottomenemy.png";
@@ -83,6 +86,7 @@ function draw() {
 		&& xPos <= pipe[i].x + pipeUp.width
 		&& (yPos <= pipe[i].y + pipeUp.height
 		|| yPos + bird.height >= pipe[i].y + pipeUp.height + gap) || yPos + bird.height >= cvs.height - fg.height) {
+			deathSound.play();
 			alert('Смерть')
 			location.reload(); // Перезагрузка страницы
 		}
