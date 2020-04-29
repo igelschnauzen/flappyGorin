@@ -44,14 +44,12 @@ if(level == '1') {
 
 var gap = 95;
 
-// При нажатии на какую-либо кнопку
 document.addEventListener("keydown", moveUp);
 
 function moveUp() {
 	yPos -= 35;
 }
 
-// Создание блоков
 var pipe = [];
 
 pipe[0] = {
@@ -60,10 +58,10 @@ pipe[0] = {
 }
 
 var score = 0;
-// Позиция Горина
+
 var xPos = 10;
 var yPos = 150;
-var grav = 1.5;
+var grav = 1.9;
 
 function draw() {
 	ctx.drawImage(bg, 0, 0);
@@ -88,7 +86,7 @@ function draw() {
 		|| yPos + bird.height >= pipe[i].y + pipeUp.height + gap) || yPos + bird.height >= cvs.height - fg.height) {
 			deathSound.play();
 			alert('Смерть')
-			location.reload(); // Перезагрузка страницы
+			location.reload();
 		}
 
 		if(pipe[i].x == 5) {
