@@ -85,7 +85,7 @@ function draw() {
 		&& (yPos <= pipe[i].y + pipeUp.height
 		|| yPos + bird.height >= pipe[i].y + pipeUp.height + gap) || yPos + bird.height >= cvs.height - fg.height) {
 			deathSound.play();
-			alert('Смерть')
+			alert('Смерть');
 			location.reload();
 		}
 
