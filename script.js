@@ -13,8 +13,8 @@ var level = prompt('lvl? (1/2)', '');
 if(level == '1') {
 	bird.src = "textures/img/gorin.player.jpg";
 	bg.src = "textures/img/bg.png";
-	pipeUp.src = "textures/img/vilka.topenemy.jpg";
-	pipeBottom.src = "textures/img/taburetka.bottomenemy.jpg";
+	pipeUp.src = "textures/img/vilka.topenemy.png";
+	pipeBottom.src = "textures/img/taburetka.bottomenemy.png";
 
 	scoreSound.src = "sound/a.mp3";
 } else if(level == '2') {
