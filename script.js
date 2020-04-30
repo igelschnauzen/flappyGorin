@@ -8,18 +8,21 @@ var pipeUp = new Image();
 var pipeBottom = new Image();
 
 var scoreSound = new Audio();
+var deathSound = new Audio();
+
+deathSound.src = "sound/death.ogg";
 
 var level = prompt('lvl? (1/2)', '');
 if(level == '1') {
-	bird.src = "textures/img/gorin.player.jpg";
+	bird.src = "textures/img/gorin.player.png";
 	bg.src = "textures/img/bg.png";
 	pipeUp.src = "textures/img/vilka.topenemy.png";
 	pipeBottom.src = "textures/img/taburetka.bottomenemy.png";
 
 	scoreSound.src = "sound/a.mp3";
 } else if(level == '2') {
-	bird.src = "textures/img2/gorin.player.jpg";
-	bg.src = "/textures/img2/bg.jpg";
+	bird.src = "textures/img2/gorin.player.png";
+	bg.src = "textures/img2/bg2.jpg";
 	pipeUp.src = "textures/img2/lopata.topenemy.png";
 	pipeBottom.src = "textures/img2/dver.bottomenemy.png";
 
@@ -36,19 +39,17 @@ if(level == '1') {
 } else if(level === ''){
 	alert('но тут же пусто'); 
 } else {
-	alert('тебе сказали русским языков блять 1 или 2, какой ' + level + '?!');
+	alert('тебе сказали русским языком блять 1 или 2, какой ' + level + '?!');
 }
 
 var gap = 95;
 
-// При нажатии на какую-либо кнопку
 document.addEventListener("keydown", moveUp);
 
 function moveUp() {
-	yPos -= 25;
+	yPos -= 35;
 }
 
-// Создание блоков
 var pipe = [];
 
 pipe[0] = {
@@ -57,10 +58,10 @@ pipe[0] = {
 }
 
 var score = 0;
-// Позиция Горина
+
 var xPos = 10;
 var yPos = 150;
-var grav = 1.5;
+var grav = 1.9;
 
 function draw() {
 	ctx.drawImage(bg, 0, 0);
@@ -83,8 +84,9 @@ function draw() {
 		&& xPos <= pipe[i].x + pipeUp.width
 		&& (yPos <= pipe[i].y + pipeUp.height
 		|| yPos + bird.height >= pipe[i].y + pipeUp.height + gap) || yPos + bird.height >= cvs.height - fg.height) {
+			deathSound.play();
 			alert('Смерть')
-			location.reload(); // Перезагрузка страницы
+			location.reload();
 		}
 
 		if(pipe[i].x == 5) {
