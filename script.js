@@ -116,7 +116,7 @@ function draw() {
 
 pipeBottom.onload = draw;
 
-//giving score to player
+//cheat, giving score equal value to player
 function hack (value) {
 	score += value;
 }
