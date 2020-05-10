@@ -48,11 +48,16 @@ if(level == '1') {
 
 var gap = 95; //the distance between the objects
 
-document.addEventListener("keydown", moveUp); //jump
+/* document.addEventListener("keydown", moveUp); //jump
 
 function moveUp() {
 	yPos -= 35; //jump height
 }
+
+*/
+
+document.addEventListener("keydown", () => grav = -3); //jump
+setInterval(() => { if(grav < 1.9) grav += 1; else if (grav > 1.9) grav = 1.9; }, 100);
 
 var pipe = [];
 
