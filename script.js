@@ -48,6 +48,7 @@ if(level == '1') {
 
 var gap = 95; //the distance between the objects
 
+//old jump physics:
 /* document.addEventListener("keydown", moveUp); //jump
 
 function moveUp() {
@@ -56,6 +57,8 @@ function moveUp() {
 
 */
 
+
+//new jump physics:
 document.addEventListener("keydown", () => grav = -3); //jump
 setInterval(() => { if(grav < 1.9) grav += 1; else if (grav > 1.9) grav = 1.9; }, 100);
 
