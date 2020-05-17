@@ -3,7 +3,6 @@ var ctx = cvs.getContext("2d");
 
 var gorin = new Image();
 var bg = new Image();
-var fg = new Image();
 var pipeUp = new Image();
 var pipeBottom = new Image();
 
