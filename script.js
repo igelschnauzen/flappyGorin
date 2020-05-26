@@ -5,6 +5,7 @@ var gorin = new Image();
 var bg = new Image();
 var pipeUp = new Image();
 var pipeBottom = new Image();
+var fg = new Image();
 
 //sounds
 var scoreSound = new Audio();
