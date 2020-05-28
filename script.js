@@ -1,20 +1,20 @@
-var cvs = document.getElementById("canvas");
-var ctx = cvs.getContext("2d");
+let cvs = document.getElementById("canvas");
+let ctx = cvs.getContext("2d");
 
-var gorin = new Image();
-var bg = new Image();
-var pipeUp = new Image();
-var pipeBottom = new Image();
-var fg = new Image();
+let gorin = new Image();
+let bg = new Image();
+let pipeUp = new Image();
+let pipeBottom = new Image();
+let fg = new Image();
 
 //sounds
-var scoreSound = new Audio();
-var deathSound = new Audio();
+let scoreSound = new Audio();
+let deathSound = new Audio();
 
 deathSound.src = "sound/death.ogg";
 
 //select lvl
-var level = prompt('lvl? (1/2)', '');
+let level = prompt('lvl? (1/2)', '');
 
 //select textures and score sound in relation to lvl
 if(level == '1') {
@@ -46,7 +46,7 @@ if(level == '1') {
 	alert('тебе сказали русским языком блять 1 или 2, какой ' + level + '?!');
 }
 
-var gap = 95; //the distance between the objects
+let gap = 95; //the distance between the objects
 
 //old jump physics:
 /* document.addEventListener("keydown", moveUp); //jump
@@ -62,24 +62,24 @@ function moveUp() {
 document.addEventListener("keydown", () => grav = -3); //jump
 setInterval(() => { if(grav < 1.9) grav += 1; else if (grav > 1.9) grav = 1.9; }, 100);
 
-var pipe = [];
+let pipe = [];
 
 pipe[0] = {
 	x : cvs.width,
 	y : 0
 }
 
-var score = 0;
+let score = 0;
 
 //position and gravity value
-var xPos = 10;
-var yPos = 150;
-var grav = 1.9;
+let xPos = 10;
+let yPos = 150;
+let grav = 1.9;
 
 function draw() {
 	ctx.drawImage(bg, 0, 0);
 
-	for(var i = 0; i < pipe.length; i++) {
+	for(let i = 0; i < pipe.length; i++) {
 		ctx.drawImage(pipeUp, pipe[i].x, pipe[i].y);
 		ctx.drawImage(pipeBottom, pipe[i].x, pipe[i].y + pipeUp.height + gap);
 
