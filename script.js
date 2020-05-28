@@ -50,26 +50,25 @@ function setLevel(level) {
 	} else {
 		alert('тебе сказали русским языком блять 1 или 2, какой ' + level + '?!');
 		location.reload();
+		
 	}
 	
 }
 
 setLevel();
 
+
 let gap = 95; //the distance between the objects
 
-//old jump physics:
-/* document.addEventListener("keydown", moveUp);
-
-function moveUp() {
-	yPos -= 35; //jump height
+function checkKey(e) {
+	if(e.keyCode == '80') {
+		//there will be a pause
+	} else {
+		grav = -3;
+	}
 }
 
-*/
-
-
-//new jump physics:
-document.addEventListener("keydown", () => grav = -3); //jump
+document.addEventListener("keydown", checkKey); //jump
 setInterval(() => { if(grav < 1.9) grav += 1; else if (grav > 1.9) grav = 1.9; }, 100);
 
 let pipe = [];
@@ -133,7 +132,7 @@ function draw() {
 }
 
 pipeBottom.onload = draw;
-	
+
 //cheat, giving score equal value to player
 function hack (value) {
 	score += value;
