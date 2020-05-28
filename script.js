@@ -14,7 +14,6 @@ let deathSound = new Audio();
 deathSound.src = "sound/death.ogg";
 
 //select level
-
 function setLevel(level) {
 	level = prompt('lvl? (1/2)', '');
 
@@ -57,8 +56,7 @@ function setLevel(level) {
 
 setLevel();
 
-
-let gap = 95; //the distance between the objects
+let gap = 95;
 
 //pause
 function checkKey(e) {
