@@ -13,38 +13,44 @@ let deathSound = new Audio();
 
 deathSound.src = "sound/death.ogg";
 
-//select lvl
-let level = prompt('lvl? (1/2)', '');
+//select level
 
-//select textures and score sound in relation to lvl
-if(level == '1') {
-	gorin.src = "textures/img/gorin.player.png";
-	bg.src = "textures/img/bg.png";
-	pipeUp.src = "textures/img/vilka.topenemy.png";
-	pipeBottom.src = "textures/img/taburetka.bottomenemy.png";
+function setLevel(level) {
+	level = prompt('lvl? (1/2)', '');
 
-	scoreSound.src = "sound/a.mp3";
-} else if(level == '2') {
-	gorin.src = "textures/img2/gorin.player.png";
-	bg.src = "textures/img2/bg2.jpg";
-	pipeUp.src = "textures/img2/lopata.topenemy.png";
-	pipeBottom.src = "textures/img2/dver.bottomenemy.png";
-
-	scoreSound.src = "sound/a.mp3";
-} else if(level == '666') {
-	gorin.src = "textures/sl/poroshenko.player.png";
-	bg.src = "textures/sl/bg.png";
-	pipeUp.src = "textures/sl/putin.topenemy.jpg";
-	pipeBottom.src = "textures/sl/zel.bottomenemy.jpg";
-
-	scoreSound.src = "sound/b.mp3";
-} else if(level === null || level === undefined || level === NaN){
-	alert('што');
-} else if(level === ''){
-	alert('но тут же пусто'); 
-} else {
-	alert('тебе сказали русским языком блять 1 или 2, какой ' + level + '?!');
+	if(level == '1') {
+		gorin.src = "textures/img/gorin.player.png";
+		bg.src = "textures/img/bg.png";
+		pipeUp.src = "textures/img/vilka.topenemy.png";
+		pipeBottom.src = "textures/img/taburetka.bottomenemy.png";
+	
+		scoreSound.src = "sound/a.mp3";
+	} else if(level == '2') {
+		gorin.src = "textures/img2/gorin.player.png";
+		bg.src = "textures/img2/bg2.jpg";
+		pipeUp.src = "textures/img2/lopata.topenemy.png";
+		pipeBottom.src = "textures/img2/dver.bottomenemy.png";
+	
+		scoreSound.src = "sound/a.mp3";
+	} else if(level == '666') {
+		gorin.src = "textures/sl/poroshenko.player.png";
+		bg.src = "textures/sl/bg.png";
+		pipeUp.src = "textures/sl/putin.topenemy.jpg";
+		pipeBottom.src = "textures/sl/zel.bottomenemy.jpg";
+	
+		scoreSound.src = "sound/b.mp3";
+	} else if(level === null || level === undefined || level === NaN){
+		alert('што');
+	} else if(level === ''){
+		alert('но тут же пусто'); 
+	} else {
+		alert('тебе сказали русским языком блять 1 или 2, какой ' + level + '?!');
+	}
+	
 }
+
+setLevel();
+
 
 let gap = 95; //the distance between the objects
 
