@@ -41,21 +41,25 @@ function setLevel(level) {
 		scoreSound.src = "sound/b.mp3";
 	} else if(level === null || level === undefined || level === NaN){
 		alert('што');
+		location.reload();
+
 	} else if(level === ''){
 		alert('но тут же пусто'); 
+		location.reload();
+
 	} else {
 		alert('тебе сказали русским языком блять 1 или 2, какой ' + level + '?!');
+		location.reload();
 	}
 	
 }
 
 setLevel();
 
-
 let gap = 95; //the distance between the objects
 
 //old jump physics:
-/* document.addEventListener("keydown", moveUp); //jump
+/* document.addEventListener("keydown", moveUp);
 
 function moveUp() {
 	yPos -= 35; //jump height
@@ -129,7 +133,7 @@ function draw() {
 }
 
 pipeBottom.onload = draw;
-
+	
 //cheat, giving score equal value to player
 function hack (value) {
 	score += value;
