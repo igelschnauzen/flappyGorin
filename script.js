@@ -54,6 +54,12 @@ function setLevel(level) {
 	
 }
 
+function death() {
+	deathSound.play();
+	alert(`\nСмерть.` +  `\n Счет: ` + score);
+	location.reload();
+}
+
 setLevel();
 
 let gap = 95;
@@ -62,9 +68,14 @@ let gap = 95;
 function checkKey(e) {
 	if(e.keyCode == '27') {
 		alert('Пауза (Нажмите ОК, чтобы снять).');
+
+	} else if(e.keyCode == '8') {
+		death();
 	} else {
 		grav = -3;
+
 	}
+
 }
 
 document.addEventListener("keydown", checkKey); //jump
@@ -106,9 +117,7 @@ function draw() {
 		&& xPos <= pipe[i].x + pipeUp.width
 		&& (yPos <= pipe[i].y + pipeUp.height
 		|| yPos + gorin.height >= pipe[i].y + pipeUp.height + gap) || yPos + gorin.height >= cvs.height - fg.height) {
-			deathSound.play();
-			alert(`\nСмерть.` +  `\n Счет: ` + score);
-			location.reload();
+			death();
 		}
 	
 		//giving score
