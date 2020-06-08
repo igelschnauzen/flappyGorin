@@ -58,6 +58,8 @@ function death() {
 	deathSound.play();
 	alert(`\nСмерть.` +  `\n Счет: ` + score);
 	location.reload();
+
+	return;
 }
 
 setLevel();
