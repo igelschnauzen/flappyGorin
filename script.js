@@ -57,6 +57,7 @@ function setLevel(level) {
 function death() {
 	deathSound.play();
 	alert(`\nСмерть.` +  `\n Счет: ` + score);
+
 	location.reload();
 
 	return;
@@ -70,12 +71,12 @@ let gap = 95;
 function checkKey(e) {
 	if(e.keyCode == '27') {
 		alert('Пауза (Нажмите ОК, чтобы снять).');
-
 	} else if(e.keyCode == '8') {
 		death();
+	} else if(e.keyCode == '16') {
+		grav = -6;
 	} else {
 		grav = -3;
-
 	}
 
 }
