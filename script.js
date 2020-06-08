@@ -75,6 +75,8 @@ function checkKey(e) {
 		death();
 	} else if(e.keyCode == '16') {
 		grav = -6;
+	} else if(e.keyCode == '17'){
+		grav = +6;
 	} else {
 		grav = -3;
 	}
