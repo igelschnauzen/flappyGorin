@@ -67,7 +67,6 @@ setLevel();
 
 let gap = 95;
 
-//pause
 function checkKey(e) {
 	if(e.keyCode == '27') {
 		alert('Пауза (Нажмите ОК, чтобы снять).');
