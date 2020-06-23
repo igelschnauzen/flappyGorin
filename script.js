@@ -122,7 +122,7 @@ function draw() {
 		&& xPos <= pipe[i].x + pipeUp.width
 		&& (yPos <= pipe[i].y + pipeUp.height
 		|| yPos + gorin.height >= pipe[i].y + pipeUp.height + gap) || yPos + gorin.height >= cvs.height - fg.height) {
-			death();
+			return death();
 		}
 	
 		//giving score
