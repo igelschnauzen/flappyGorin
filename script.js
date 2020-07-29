@@ -11,7 +11,7 @@ let fg = new Image();
 let scoreSound = new Audio();
 let deathSound = new Audio();
 
-deathSound.src = "sound/death.ogg";
+deathSound.src = "sound/death.mp3";
 
 //select level
 function setLevel(level) {
