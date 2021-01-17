@@ -13,7 +13,7 @@ class Level {
 		this.deathSound = new Audio();
 		
 		this.deathSound.src = "sound/death.mp3";
-		
+			
 		if(levelNumber == '1') {
 			this.gorin.src = "textures/img/gorin.player.png";
 			this.bg.src = "textures/img/bg.png";
@@ -36,14 +36,14 @@ class Level {
 	
 			this.scoreSound.src = "sound/b.mp3";
 		} else {
-			alert(levelNumber);
+			alert('Ошибка!');
 			location.reload();
 		
 		}
 	}
 }
 
-let level = new Level(prompt('Level?', ''));
+let level = new Level(prompt('Введите уровень (1/2?)', ''));
 
 function death() {
 	level.deathSound.play();
