@@ -13,32 +13,39 @@ class Level {
 		this.deathSound = new Audio();
 		
 		this.deathSound.src = "sound/death.mp3";
-			
-		if(levelNumber == '1') {
-			this.gorin.src = "textures/img/gorin.player.png";
-			this.bg.src = "textures/img/bg.png";
-			this.pipeUp.src = "textures/img/vilka.topenemy.png";
-			this.pipeBottom.src = "textures/img/taburetka.bottomenemy.png";
-	
-			this.scoreSound.src = "sound/a.mp3";
-		} else if(levelNumber == '2') {
-			this.gorin.src = "textures/img2/gorin.player.png";
-			this.bg.src = "textures/img2/bg2.jpg";
-			this.pipeUp.src = "textures/img2/lopata.topenemy.png";
-			this.pipeBottom.src = "textures/img2/dver.bottomenemy.png";
-	
-			this.scoreSound.src = "sound/a.mp3";
-		} else if(levelNumber == '666') {
-			this.gorin.src = "textures/sl/poroshenko.player.png";
-			this.bg.src = "textures/sl/bg.png";
-			this.pipeUp.src = "textures/sl/putin.topenemy.jpg";
-			this.pipeBottom.src = "textures/sl/zel.bottomenemy.jpg";
-	
-			this.scoreSound.src = "sound/b.mp3";
-		} else {
-			alert('Ошибка!');
-			location.reload();
 		
+		switch(levelNumber) {
+			case '1':
+				this.gorin.src = "textures/img/gorin.player.png";
+				this.bg.src = "textures/img/bg.png";
+				this.pipeUp.src = "textures/img/vilka.topenemy.png";
+				this.pipeBottom.src = "textures/img/taburetka.bottomenemy.png";
+	
+				this.scoreSound.src = "sound/a.mp3";
+				
+				break;
+			case '2':
+				this.gorin.src = "textures/img2/gorin.player.png";
+				this.bg.src = "textures/img2/bg2.jpg";
+				this.pipeUp.src = "textures/img2/lopata.topenemy.png";
+				this.pipeBottom.src = "textures/img2/dver.bottomenemy.png";
+	
+				this.scoreSound.src = "sound/a.mp3";
+			
+				break;
+			case '666':
+				this.gorin.src = "textures/sl/poroshenko.player.png";
+				this.bg.src = "textures/sl/bg.png";
+				this.pipeUp.src = "textures/sl/putin.topenemy.jpg";
+				this.pipeBottom.src = "textures/sl/zel.bottomenemy.jpg";
+	
+				this.scoreSound.src = "sound/b.mp3";
+
+				break;
+			default:
+				alert('Ошибка!');
+				location.reload();
+
 		}
 	}
 }
