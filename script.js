@@ -61,22 +61,30 @@ function death() {
 	return;
 }
 
-let gap = 95;
-
 function checkKey(e) {
-	if(e.keyCode == '27') {
-		alert('Пауза (Нажмите ОК, чтобы снять).');
-	} else if(e.keyCode == '8') {
-		death();
-	} else if(e.keyCode == '16') {
-		grav = -6;
-	} else if(e.keyCode == '17'){
-		grav = +6;
-	} else {
-		grav = -3;
-	}
+	switch(e.keyCode) {
+		case 27:
+			alert('Пауза.');
 
+			break;
+		case 8:
+			death();
+
+			break;
+		case 16:
+			grav = -6;
+
+			break;
+		case 17:
+			grav = +6;
+
+			break;
+		default:
+			grav = -3;
+	}
 }
+
+let gap = 95;
 
 document.addEventListener("keydown", checkKey); //jump
 setInterval(() => { if(grav < 1.9) grav += 1; else if (grav > 1.9) grav = 1.9; }, 100);
@@ -142,7 +150,6 @@ function draw() {
 
 }
 
-//cheat, giving score equal value to player
 function hack (value) {
 	score += value;
 }
