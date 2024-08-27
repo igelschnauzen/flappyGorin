@@ -34,15 +34,7 @@ class Level {
 				this.scoreSound.src = "sound/a.mp3";
 			
 				break;
-			case '666':
-				this.gorin.src = "textures/sl/poroshenko.player.png";
-				this.bg.src = "textures/sl/bg.png";
-				this.pipeUp.src = "textures/sl/putin.topenemy.jpg";
-				this.pipeBottom.src = "textures/sl/zel.bottomenemy.jpg";
-	
-				this.scoreSound.src = "sound/b.mp3";
 
-				break;
 			default:
 				alert('Ошибка!');
 				location.reload();
@@ -145,7 +137,7 @@ function draw() {
 	//score
 	ctx.fillStyle = "#000";
 	ctx.font = "24px unifont";
-	
+
 	ctx.fillText(+ score, 10, cvs.height - 20);
 	
 	requestAnimationFrame(draw);
