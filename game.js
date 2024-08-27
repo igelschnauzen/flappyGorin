@@ -14,6 +14,7 @@ class Level {
 		this.deathSound = new Audio();
 		
 		this.deathSound.src = "sound/death.mp3";
+		this.scoreSound.src = "sound/score.mp3";
 		
 		switch(levelNumber) {
 			case '1':
@@ -21,8 +22,6 @@ class Level {
 				this.bg.src = "textures/img/bg.png";
 				this.pipeUp.src = "textures/img/vilka.topenemy.png";
 				this.pipeBottom.src = "textures/img/taburetka.bottomenemy.png";
-	
-				this.scoreSound.src = "sound/a.mp3";
 				
 				break;
 			case '2':
@@ -30,9 +29,7 @@ class Level {
 				this.bg.src = "textures/img2/bg2.jpg";
 				this.pipeUp.src = "textures/img2/lopata.topenemy.png";
 				this.pipeBottom.src = "textures/img2/dver.bottomenemy.png";
-	
-				this.scoreSound.src = "sound/a.mp3";
-			
+
 				break;
 
 			default:
