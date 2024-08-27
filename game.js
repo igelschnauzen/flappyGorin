@@ -144,8 +144,9 @@ function draw() {
 	
 	//score
 	ctx.fillStyle = "#000";
-	ctx.font = "24px Verdana";
-	ctx.fillText("Счет: " + score, 10, cvs.height - 20);
+	ctx.font = "24px unifont";
+	
+	ctx.fillText(+ score, 10, cvs.height - 20);
 	
 	requestAnimationFrame(draw);
 
