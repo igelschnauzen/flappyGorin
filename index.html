@@ -5,17 +5,28 @@
 	<meta charset="UTF8">
 	<meta name="viewport" content="width=device-width">
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
-	<script src="script.js" defer="true"></script>
-	<style type="text/css">
-		html, body {
-			padding: 0px;
-			margin: 0px;
-		}
-	</style>
+	<link rel="stylesheet" href="style.css">
+	<script src="menu.js" defer="true"></script>
 </head>
 
 <body>
-	<canvas id="canvas" height="512" width="288">
+	<canvas id="canvas" height="512" width="288" hidden="true" level="0">
 	</canvas>
+
+	<div class="placeholder">
+		<div class="placeholder__elem levels">
+			<button class="levels__selector" id="1">
+				<p>Уровень 1</p>
+			</button>
+
+			<button class="levels__selector" id="2">
+				<p>Уровень 2</p>
+			</button>
+
+			<button class="levels__selector secretlevel" id="666">
+				
+			</button>
+		</div>
+	</div>
 </body> 
 </html>

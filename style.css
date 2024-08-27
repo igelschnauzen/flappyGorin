@@ -1,0 +1,10 @@
+html, body {
+    padding: 0px;
+    margin: 0px;
+}
+
+.placeholder {
+    background-color: black;
+    height: 512px;
+    width: 288px;
+}
