@@ -3,7 +3,6 @@ let ctx = cvs.getContext("2d");
 
 class Level {
 	constructor(levelNumber) {
-		console.log(levelNumber);
 		this.gorin = new Image();
 		this.bg = new Image();
 		this.pipeUp = new Image();
