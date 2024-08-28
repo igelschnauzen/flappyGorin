@@ -10,7 +10,7 @@ document.addEventListener("click", (event) => {
         document.querySelector("#canvas").hidden = false;
 
         let game = document.createElement("script");
-        game.src = "game.js";
+        game.src = "scripts/game.js";
         game.id="game";
         game.defer = true;
         document.head.append(game);

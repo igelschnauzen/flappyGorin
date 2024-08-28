@@ -32,4 +32,7 @@ html, body {
 .levels button {
     margin: 5%;
     padding: 5%;
+    color: #fff;
+    background: #212529;
+    border-color: #212529;
 }
