@@ -1,5 +1,21 @@
-let cvs = document.getElementById("canvas");
-let ctx = cvs.getContext("2d");
+const cvs = document.getElementById("canvas");
+const ctx = cvs.getContext("2d");
+
+const levelTextures = {
+	"1": {
+		gorin: "textures/img/gorin.player.png",
+		bg: "textures/img/bg.png",
+		pipeUp: "textures/img/vilka.topenemy.png",
+		pipeBottom: "textures/img/taburetka.bottomenemy.png"
+	},
+
+	"2": {
+		gorin: "textures/img2/gorin.player.png",
+		bg: "textures/img2/bg2.jpg",
+		pipeUp: "textures/img2/lopata.topenemy.png",
+		pipeBottom: "textures/img2/dver.bottomenemy.png"
+	},
+}
 
 class Level {
 	constructor(levelNumber) {
@@ -14,32 +30,16 @@ class Level {
 		
 		this.deathSound.src = "sound/death.mp3";
 		this.scoreSound.src = "sound/score.mp3";
+
+		this.gorin.src = levelTextures[levelNumber].gorin;
+		this.bg.src = levelTextures[levelNumber].bg;
+		this.pipeUp.src = levelTextures[levelNumber].pipeUp;
+		this.pipeBottom.src = levelTextures[levelNumber].pipeBottom;
 		
-		switch(levelNumber) {
-			case '1':
-				this.gorin.src = "textures/img/gorin.player.png";
-				this.bg.src = "textures/img/bg.png";
-				this.pipeUp.src = "textures/img/vilka.topenemy.png";
-				this.pipeBottom.src = "textures/img/taburetka.bottomenemy.png";
-				
-				break;
-			case '2':
-				this.gorin.src = "textures/img2/gorin.player.png";
-				this.bg.src = "textures/img2/bg2.jpg";
-				this.pipeUp.src = "textures/img2/lopata.topenemy.png";
-				this.pipeBottom.src = "textures/img2/dver.bottomenemy.png";
-
-				break;
-
-			default:
-				alert('Ошибка!');
-				location.reload();
-
-		}
 	}
 }
 
-let level = new Level(document.querySelector("#canvas").getAttribute("level"));
+const level = new Level(document.querySelector("#canvas").getAttribute("level"));
 
 function death() {
 	level.deathSound.play();

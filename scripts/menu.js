@@ -1,7 +1,5 @@
 "use strict";
 
-let selectedLevel;
-
 document.addEventListener("click", (event) => {
     if(event.target.tagName.toLowerCase() == "button") {
         document.querySelector("#canvas").setAttribute("level", event.target.id);
